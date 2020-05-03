@@ -3,10 +3,17 @@
     <h2>A Simple Demo of Mixin on Vue3 Beta</h2>
 
     <label for="name">Your name:</label>
-    <input type="text" v-model="mixName" name="name" style="margin-top:3em;margin-left:5px" />
+    <input
+      type="text"
+      v-model="mixName"
+      name="name"
+      style="margin-top:3em;margin-left:5px"
+    />
 
-    <h5 style="margin-top:5em">This message is brought to you by the mixin..</h5>
-    <q>Hello, {{ this.mixName }}</q>
+    <h5 style="margin-top:5em">
+      This message is brought to you by the mixin..
+    </h5>
+    <q>Hello, {{ mixName }}</q>
 
     <h5 style="margin-top:5em">.. and so is this click</h5>
     <button @click="showAlert">Alert Me</button>
@@ -22,7 +29,7 @@ export default {
   components: {
     // HelloWorld
   },
-  mixins: [HelloMixin]
+  mixins: [HelloMixin],
 };
 </script>
 
